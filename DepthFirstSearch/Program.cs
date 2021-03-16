@@ -153,7 +153,7 @@ namespace DepthFirstSearch
                     if (result)
                     {
                         Console.Write(endPointInt + " - ");
-                        Console.WriteLine("The end poit was found!");
+                        Console.WriteLine("The end point was found!");
                     }
                     else
                     {
