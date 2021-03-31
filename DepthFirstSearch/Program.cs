@@ -83,7 +83,6 @@ namespace DepthFirstSearch
 
         static bool DFSSetup(int startPoint, int targetPoint)
         {
-            // setup dictionary and bool array
             pointAndItsAdjasent = new Dictionary<int, List<int>>();
 
             bool[] visited = new bool[AmountOfPoints];
@@ -109,10 +108,14 @@ namespace DepthFirstSearch
         static bool DFSRecursive(bool[] visited, int currentPoint, int targetPoint)
         {
             if (currentPoint == targetPoint)
+            {
                 return true;
+            }
 
             if (visited[currentPoint])
+            {
                 return false;
+            }
 
             visited[currentPoint] = true;
             Console.Write(currentPoint + " - ");
@@ -123,7 +126,9 @@ namespace DepthFirstSearch
                 {
                     var reached = DFSRecursive(visited, point, targetPoint);
                     if (reached)
+                    {
                         return true;
+                    }
                 }
             }
             return false;
